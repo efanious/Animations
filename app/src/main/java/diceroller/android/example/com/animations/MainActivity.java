@@ -7,7 +7,6 @@ import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
 
-    boolean batmanIsShowing = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,15 +18,9 @@ public class MainActivity extends AppCompatActivity {
         ImageView batmanImageView = (ImageView) findViewById(R.id.batmanImageView);
         ImageView supermanImageView = (ImageView) findViewById(R.id.supermanImageView);
 
-        if (batmanIsShowing){
-            batmanIsShowing = false;
-            batmanImageView.animate().alpha(0).setDuration(2000);
-            supermanImageView.animate().alpha(1).setDuration(2000);
-        } else {
-            batmanIsShowing = true;
-            batmanImageView.animate().alpha(1).setDuration(2000);
-            supermanImageView.animate().alpha(0).setDuration(2000);
-        }
+
+        batmanImageView.animate().rotation(3600).alpha(0).setDuration(1000);
+        supermanImageView.animate().alpha(1).setDuration(1000);
 
     }
 }
