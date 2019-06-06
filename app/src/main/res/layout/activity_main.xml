@@ -10,14 +10,14 @@
         android:id="@+id/batmanImageView"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:contentDescription="@string/batman"
         android:onClick="fade"
         android:scaleType="fitStart"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/batman"
-        android:contentDescription="@string/batman" />
+        app:srcCompat="@drawable/batman" />
 
     <ImageView
         android:id="@+id/supermanImageView"

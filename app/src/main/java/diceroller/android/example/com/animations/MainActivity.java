@@ -7,17 +7,19 @@ import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        ImageView batmanImageView = (ImageView) findViewById(R.id.batmanImageView);
+        batmanImageView.setX(-1000);
+        batmanImageView.animate().translationXBy(1000).rotation(3600).setDuration(1000);
     }
 
     public void fade(View view) {
         ImageView batmanImageView = (ImageView) findViewById(R.id.batmanImageView);
         ImageView supermanImageView = (ImageView) findViewById(R.id.supermanImageView);
-
 
         batmanImageView.animate().rotation(3600).alpha(0).setDuration(1000);
         supermanImageView.animate().alpha(1).setDuration(1000);
